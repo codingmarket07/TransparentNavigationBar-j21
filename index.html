@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Transparent Navigation Bar</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$(function(){
+			$(".hamburger .fa-times").hide();
+
+		$(".hamburger .fa-bars").click(function(){
+		    $(".hamburger .fa-times").show();
+		    $(this).hide();
+		    $(".nav-bar").addClass("active");
+		});
+
+		$(".hamburger .fa-times").click(function(){
+		    $(".hamburger .fa-bars").show();
+		    $(this).hide();
+		    $(".nav-bar").removeClass("active");
+		});	
+		});
+	</script>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="hamburger">
+       <i class="fas fa-bars"></i>
+       <i class="fas fa-times"></i>
+  </div>
+  
+  <div class="nav-bar">
+    <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#">profile</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">services</a></li>
+        <li><a href="#">resume</a></li>
+        <li><a href="#">contact</a></li>    
+    </ul>    
+  </div>
+</div>
+</body>
+</html>
